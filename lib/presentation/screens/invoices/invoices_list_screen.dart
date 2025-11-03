@@ -1,9 +1,10 @@
 import 'package:client_demo/presentation/viewmodels/invoice_viewmodel.dart';
+import 'package:client_demo/presentation/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/theme/app_colors.dart';
-import '../../../core/constants/app_constants.dart';
-import '../../providers/invoice_provider.dart';
+// import '../../../core/constants/app_constants.dart';
+// import '../../providers/invoice_provider.dart';
 import '../../widgets/common/loading_widget.dart';
 import '../../widgets/common/error_widget.dart';
 import '../../widgets/common/empty_state_widget.dart';
@@ -90,6 +91,7 @@ class _InvoicesListScreenState extends ConsumerState<InvoicesListScreen> {
           ),
         ],
       ),
+      drawer: const AppDrawer(),
       body: _buildBody(state, invoices),
     );
   }

@@ -1,10 +1,13 @@
+// ignore_for_file: use_build_context_synchronously
+
+import 'package:client_demo/presentation/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../core/theme/app_colors.dart';
-import '../../../core/theme/text_styles.dart';
+// import '../../../core/theme/text_styles.dart';
 import '../../../core/utils/snackbar_utils.dart';
-import '../../providers/client_provider.dart';
+// import '../../providers/client_provider.dart';
 import '../../viewmodels/client_viewmodel.dart';
 import '../../widgets/common/loading_widget.dart';
 import '../../widgets/common/error_widget.dart';
@@ -101,6 +104,7 @@ class _ClientsListScreenState extends ConsumerState<ClientsListScreen> {
           ),
         ],
       ),
+      drawer: const AppDrawer(),
       body: Column(
         children: [
           // Search Bar
