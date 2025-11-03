@@ -25,25 +25,20 @@ class ApiInterceptor extends Interceptor {
       }
     }
 
-    print('🚀 REQUEST[${options.method}] => PATH: ${options.path}');
-    print('🔑 Headers: ${options.headers}');
     if (options.data != null) {
-      print('📦 Body: ${options.data}');
     }
     if (options.queryParameters.isNotEmpty) {
-      print('🔍 Params: ${options.queryParameters}');
     }
 
     super.onRequest(options, handler);
   }
 
   @override
+  // ignore: unnecessary_overrides
   void onResponse(
     Response response,
     ResponseInterceptorHandler handler,
   ) {
-    print('✅ RESPONSE[${response.statusCode}] => PATH: ${response.requestOptions.path}');
-    print('📥 Data: ${response.data}');
 
     super.onResponse(response, handler);
   }
@@ -53,12 +48,8 @@ class ApiInterceptor extends Interceptor {
     DioException err,
     ErrorInterceptorHandler handler,
   ) async {
-    print('❌ ERROR[${err.response?.statusCode}] => PATH: ${err.requestOptions.path}');
-    print('💥 Message: ${err.message}');
-    print('📛 Error Type: ${err.type}');
 
     if (err.response != null) {
-      print('📥 Error Response: ${err.response?.data}');
     }
 
     // Handle different error scenarios
@@ -112,8 +103,8 @@ class ApiInterceptor extends Interceptor {
       } else if (responseData is String) {
         errorMessage = responseData;
       }
+    // ignore: empty_catches
     } catch (e) {
-      print('Error parsing error response: $e');
     }
 
     switch (statusCode) {
@@ -134,7 +125,6 @@ class ApiInterceptor extends Interceptor {
 
       case 401:
         // Token expired or invalid - trigger logout
-        print('🔐 Unauthorized - Clearing token and redirecting to login');
         await storageService.clearAll();
         
         // Call the unauthorized callback

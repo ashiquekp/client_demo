@@ -33,6 +33,7 @@ class DioClient {
         requestHeader: true,
         responseHeader: false,
         request: true,
+        // ignore: avoid_print
         logPrint: (obj) => print('[DIO] $obj'),
       ),
     );
