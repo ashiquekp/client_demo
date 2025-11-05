@@ -22,7 +22,7 @@ class HomeScreen extends ConsumerWidget {
           IconButton(
             icon: const Icon(Icons.notifications_outlined),
             onPressed: () {
-              // TODO: Navigate to notifications
+              // Todo: Navigate to notifications
             },
           ),
         ],
