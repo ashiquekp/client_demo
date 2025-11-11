@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../../core/theme/app_colors.dart';
-// import '../../../core/theme/text_styles.dart';
 import '../../../core/utils/snackbar_utils.dart';
-// import '../../providers/client_provider.dart';
 import '../../viewmodels/client_viewmodel.dart';
 import '../../widgets/common/loading_widget.dart';
 import '../../widgets/common/error_widget.dart';
@@ -97,7 +95,7 @@ class _ClientsListScreenState extends ConsumerState<ClientsListScreen> {
           IconButton(
             icon: const Icon(Icons.filter_list),
             onPressed: () {
-              // TODO: Show filter options
+              // Todo: Show filter options
             },
           ),
         ],
@@ -168,7 +166,7 @@ class _ClientsListScreenState extends ConsumerState<ClientsListScreen> {
           return ClientCardWidget(
             client: client,
             onTap: () {
-              // TODO: Navigate to client detail
+              // Todo: Navigate to client detail
             },
             onEdit: () async {
               await context.push('/clients/${client.id}/edit');
