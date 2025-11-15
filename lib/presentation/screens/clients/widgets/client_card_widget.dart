@@ -31,7 +31,7 @@ class ClientCardWidget extends StatelessWidget {
               // Avatar
               CircleAvatar(
                 radius: 28,
-                backgroundColor: AppColors.primary.withOpacity(0.1),
+                backgroundColor: AppColors.primary.withValues(alpha: 0.1),
                 child: Text(
                   client.initials,
                   style: AppTextStyles.titleMedium.copyWith(
