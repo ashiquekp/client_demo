@@ -93,7 +93,7 @@ class AppDrawer extends ConsumerWidget {
                   title: 'Settings',
                   onTap: () {
                     Navigator.pop(context);
-                    // TODO: Navigate to settings
+                    // Todo: Navigate to settings
                   },
                 ),
                 _DrawerItem(
@@ -101,7 +101,7 @@ class AppDrawer extends ConsumerWidget {
                   title: 'Help & Support',
                   onTap: () {
                     Navigator.pop(context);
-                    // TODO: Navigate to help
+                    // Todo: Navigate to help
                   },
                 ),
               ],
