@@ -170,7 +170,7 @@ class _DrawerItem extends StatelessWidget {
       ),
       onTap: onTap,
       hoverColor: isDestructive
-          ? AppColors.error.withOpacity(0.1)
+          ? AppColors.error.withValues(alpha: 0.1)
           : AppColors.surfaceLight,
     );
   }
