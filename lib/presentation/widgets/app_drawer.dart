@@ -51,7 +51,7 @@ class AppDrawer extends ConsumerWidget {
                 Text(
                   user?.email ?? '',
                   style: AppTextStyles.bodySmall.copyWith(
-                    color: AppColors.white.withOpacity(0.9),
+                    color: AppColors.white.withValues(alpha: 0.9),
                   ),
                 ),
               ],
