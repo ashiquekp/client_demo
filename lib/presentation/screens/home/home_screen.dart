@@ -54,7 +54,7 @@ class HomeScreen extends ConsumerWidget {
                   Text(
                     'Welcome back,',
                     style: AppTextStyles.bodyMedium.copyWith(
-                      color: AppColors.white.withOpacity(0.9),
+                      color: AppColors.white.withValues(alpha: 0.9),
                     ),
                   ),
                   const SizedBox(height: 4),
