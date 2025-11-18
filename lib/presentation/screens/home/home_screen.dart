@@ -69,7 +69,7 @@ class HomeScreen extends ConsumerWidget {
                   Text(
                     user?.email ?? '',
                     style: AppTextStyles.bodySmall.copyWith(
-                      color: AppColors.white.withOpacity(0.8),
+                      color: AppColors.white.withValues(alpha: 0.8),
                     ),
                   ),
                 ],
