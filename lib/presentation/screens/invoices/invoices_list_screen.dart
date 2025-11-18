@@ -138,7 +138,7 @@ class _InvoicesListScreenState extends ConsumerState<InvoicesListScreen> {
           return InvoiceCardWidget(
             invoice: invoice,
             onTap: () {
-              // TODO: Navigate to invoice detail
+              // Todo: Navigate to invoice detail.
             },
           );
         },
