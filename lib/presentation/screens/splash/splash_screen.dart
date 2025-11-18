@@ -82,7 +82,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
               Text(
                 'Client Manager',
                 style: AppTextStyles.titleMedium.copyWith(
-                  color: AppColors.white.withOpacity(0.9),
+                  color: AppColors.white.withValues(alpha: 0.9),
                 ),
               ),
               const SizedBox(height: 48),
